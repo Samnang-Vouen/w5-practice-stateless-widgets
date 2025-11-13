@@ -102,11 +102,11 @@ class WeatherCard extends StatelessWidget {
                     ),
                     SizedBox(height: 5),
                     Text(
-                      weather.min,
+                      "Min: ${weather.min}",
                       style: TextStyle(color: Colors.grey[300], fontSize: 11),
                     ),
                     Text(
-                      weather.max,
+                      "Max: ${weather.max}",
                       style: TextStyle(color: Colors.grey[300], fontSize: 11),
                     ),
                   ],
