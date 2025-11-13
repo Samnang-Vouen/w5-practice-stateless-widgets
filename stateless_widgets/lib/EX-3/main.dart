@@ -39,18 +39,32 @@ void main() {
           body: Container(
             color: Colors.blue,
             padding: const EdgeInsets.all(20),
-            child: ListView.separated(
-              itemCount: Product.values.length,
-              separatorBuilder: (_, __) => const SizedBox(height: 20),
-              itemBuilder: (context, index) {
-                final p = Product.values[index];
-                return ProductCard(
-                  imagePath: p.image,
-                  title: p.title,
-                  subtitle: p.description,
-                );
-              },
-            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                ProductCard(
+                  imagePath: Product.dart.image,
+                  title: Product.dart.title,
+                  subtitle: Product.dart.description,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ProductCard(
+                  imagePath: Product.flutter.image,
+                  title: Product.flutter.title,
+                  subtitle: Product.flutter.description,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ProductCard(
+                  imagePath: Product.firebase.image,
+                  title: Product.firebase.title,
+                  subtitle: Product.firebase.description,
+                ),
+              ],
+            )
           ),
         ),
     ),
